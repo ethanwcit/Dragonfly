@@ -1,0 +1,25 @@
+{% extends 'base_layout.html' %}
+
+{% block content %}
+<div class ="task-detail">
+
+    <div class ="task">
+        <div class="Rectangle2"></div>
+        <h2><b>{{ task.TaskName }}</b></h2>
+        <p>Description: {{task.TaskDescription}}</p>
+        <p>Due: {{task.DueDate}}</p>
+        <p>Date Set: {{task.DateSet}}</p>
+        <p>Date Modified: {{task.DateModified}}</p>
+    {% if task_files %}
+        <div class ="file">
+            {% for f in task_files %}
+            <ul class="Files">
+                <li><img src="{{ f.file.url }}" /></li>
+                <li><a class="download" href="{{ f.file.url }}" download>Download File</a></li>
+            </ul>
+            {% endfor %}ß
+        </div>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}

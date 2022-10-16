@@ -1,0 +1,27 @@
+
+{% load static %}
+<html>
+    <head>
+        <meta charset = "utf-8">
+        <title>Login</title>
+        <link rel = "stylesheet" href="{% static 'styles.css' %}">
+    </head>
+     <body class="login-body">
+    <div class="navigations">
+        <a><img src="{% static 'logo.png' %}" width="250" height="125"/></a>
+    </div>
+
+    <div class ="wrapper">
+        <form class="site-form-login" action="{% url 'accounts:login' %}" method="post">
+            {% csrf_token %}
+            {{ form }}
+            {% if request.GET.next %}
+                <input type="hidden" name="next" value="{{request.GET.next}}">
+            {% endif %}
+
+            <input type="submit" value="Login">
+        </form>
+
+    </div>
+    </body>
+</html>

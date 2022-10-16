@@ -1,0 +1,12 @@
+{% extends 'base_layout.html' %}
+{% load static %}
+
+{% block content %}
+
+{% if user.is_authenticated %}
+    <p class="welcome">Welcome to Dragonfly, {{ user.username }}. Thanks for logging in.</p>
+{% endif %}
+<h1>New Activity2</h1>
+<p>{{homepage_url}}</p>
+
+{% endblock %}

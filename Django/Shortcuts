@@ -1,0 +1,36 @@
+python manage.py runserver
+Cd H:\OneDrive\School\Cs\NEA Programming Project\Code\Django\Dragonfly
+cd H:\OneDrive\School\Cs\NEA Programming Project\Code\Django
+python manage.py migrate
+python manage.py makemigrations
+
+cd /Users/ethantesdale/OneDrive/School/Cs/NEA-Programming-Project/Code/Django/Dragonfly
+
+'''
+    #Class = models.ForeignKey('tasks.Classes', on_delete=models.CASCADE, null=True, blank=True)
+class Classes(models.Model):
+    ClassName = models.CharField(max_length=100,default=None,null=True)
+    def __str__(self):
+        return self.ClassName
+class Form(models.Model):
+    FormName = models.CharField(max_length=100,blank=True, null=True)
+    FormYear = models.CharField(max_length=100,blank=True, null=True)
+    def __str__(self):
+        return self.FormName
+
+
+class StudentUser(models.Model):
+    StudentID = models.AutoField(primary_key=True)
+    UserID = models.ForeignKey(User,on_delete=models.CASCADE, null=True, blank=True)
+    #Form = models.ForeignKey('tasks.Form', on_delete=models.CASCADE, default=None,blank=True)
+    #ClassID = models.ForeignKey('tasks.Classes', on_delete=models.CASCADE, null=True,blank=True)
+    def __str__(self):
+        return self.UserID
+
+
+
+class StudentInClass(models.Model):
+    StudentInClassID = models.AutoField(primary_key=True, default=None)
+    ClassID = models.ForeignKey('tasks.Classes', on_delete=models.CASCADE, null=True)
+    StudentID = models.ForeignKey(StudentUser,on_delete=models.CASCADE, default=None)
+'''

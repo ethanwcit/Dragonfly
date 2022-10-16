@@ -1,0 +1,356 @@
+body{
+    background-color: #0f121f;
+    background-image: url(background2.svg);
+    background-size: cover;
+    color: #fff;
+}
+
+body *{
+    font-family: Sans-serif;
+}
+
+h1, h2, h3, h4, h5{
+    font-weight: normal;
+}
+
+a, a:hover, a:visited{
+    color: #fff;
+    text-decoration: none;
+}
+
+.logo {
+    z-index: 101 !important;
+    position: absolute;
+    margin-top: -2;
+}
+nav{
+    z-index: 100 !important;
+    position:relative;
+    text-align:end;
+    }
+.Rectangle{
+    z-index: 99 !important;
+    margin-top: 8;
+   margin-left: -20;
+    position: absolute;
+    max-width: 5000;
+    background: white;
+    overflow:hidden;
+    max-height: 100;
+    height: 100;
+    width: 5000000;
+
+}
+nav li{
+    display: inline-block;
+    margin-top: -200;
+}
+nav ul{
+    margin-top: -110;
+}
+.wrapper{
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+div.wrapper h1{
+    text-align: center;
+    margin: 100px auto;
+    font-size: 2.4em;
+    margin-top: 20;
+}
+p.welcome{
+    margin-top: 20px;
+    padding: 5px;
+    max-width: fit-content;
+    background:#00dba0;
+    border: 1px solid #00dba0;
+    border-radius: 4px
+
+}
+h1{
+    max-width: fit-content;
+    padding: 10px 10px;
+    background: #000000d6;
+    border: 1px solid #000000d6;
+    border-radius: 4px;
+}
+
+div.icons{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr ;
+    padding-bottom: 50;
+}
+
+
+}
+nav ul{
+    display: inline-block;
+}
+
+nav button{
+    background: none;
+    cursor: pointer;
+    transition-duration: 0.4s;
+    border: 0;
+    font-size: 1em;
+    border: 1px solid #ff5722;
+    padding: 10px;
+    border-radius: 4px;
+    color: #ff5722;
+}
+nav button:hover{
+    background:#ff5722;
+    color: white
+}
+.task-icon img{
+    max-width:50;
+    margin: 35 200;
+    position: relative;
+}
+
+
+
+
+.bottom{
+    padding: 20;
+}
+.tasks {
+    margin-top: -60;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 30px;
+    border: 1px solid #00dba0;
+    border-radius: 7px;
+    padding: 0 20;
+    background: #fffffff7;
+    color: black;
+    padding-bottom: 55;
+
+}
+.task{
+    padding: 0 20px;
+    border-top: none;
+    padding-bottom: 40px;
+    border-radius: 4px;
+    margin-top: 50;
+    background:#eaecee8a;
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+}
+
+.task h4{
+    text-align: center;
+    border: 1px solid;
+    border-radius: 4px;
+    margin-top: -0.5;
+}
+.task a{
+    text-align: center;
+    color: black;
+    font-size: 1.5em;
+    transition-duration: 0.3s;
+}
+.task a:hover{
+    color: white;
+}
+.task h4:hover{
+    background: black;
+    color: white;
+}
+.task .author{
+    padding: 10px;
+    background: #00dba0;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    margin: 0;
+    color: #0f121f;
+    border-top-left-radius: 4px
+}
+.task-detail .task{
+    pading: 0;
+}
+
+.task-detail .task img{
+    max-width: 40;
+}
+
+.task-detail .task h2{
+    margin-top: 5;
+    text-align: center;
+    font-size: 2em;
+    color: white;
+    border: none;
+    position: relative;
+
+}
+
+.task-detail .task p{
+    text-align: center;
+
+}
+
+div.create-task h2{
+    max-width: fit-content;
+    padding: 10px 10px;
+    background: #000000d6;
+    border: 1px solid #000000d6;
+    border-radius: 4px;
+    margin-top: ;
+}
+
+.site-form{
+    display: grid;
+    margin-top: 20px;
+    border: 1px solid #00dba0;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: fit-content;
+    background: #0f0f0fc4
+}
+.site-form input, .site-form textarea{
+    display: block;
+    margin: 10px 20px 20px 0;
+    padding: 10px 8px;
+    background: #6f6f6f54;
+    border: none;
+    border-radius: 4px;
+    color: white
+}
+body.login-body{
+    text-align: center;
+}
+.site-form-login{
+    display: inline-block;
+    text-align: left;
+    margin-top: 10px;
+    border: 1px solid #00dba0;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: fit-content;
+    background: #0f0f0fc4
+}
+.site-form-login input, .site-form-login textarea{
+    display: block;
+    margin: 10px 20px 20px 0;
+    padding: 10px 8px;
+    background: #6f6f6f54;
+    border: none;
+    border-radius: 4px;
+    color: white
+}
+
+
+a.highlight{
+    border: 1px solid #00dba0;
+    padding: 10px;
+    border-radius: 4px;
+    color: #00dba0;
+    max-width: fit-content;
+    transition-duration: 0.4s;
+}
+
+a.highlight:hover{
+    color: white;
+    background:#00dba0;
+
+}
+.helptext, .helptext ul{
+    margin: 0 auto 20px;
+    color: #bbb;
+    font-size: 0.9em
+    display: block;
+}
+
+.errorlist li{
+    padding: 7px;
+    background: #ff5722;
+    list-stype-type: none;
+    border: 1px solid #ff5722;
+    color: #000;
+    margin: 10px 0;
+    border-radius: 4px
+
+}
+
+.errorlist{
+    padding: 0;
+}
+
+.site-form input[type="submit"]{
+    background: #00dba0;
+    border: 0.1px solid #00dba0;
+    color: #fff;
+    font-size: 1.1em;
+    border-radius: 1px;
+    cursor:pointer;
+    transition-duration: 0.4s;
+}
+.site-form input[type="submit"]:hover {
+    background-color: #4caf5000;
+    color: white;
+}
+
+.site-form-login input[type="submit"]{
+    background: #00dba0;
+    border: 0.1px solid #00dba0;
+    color: #fff;
+    font-size: 1.1em;
+    border-radius: 4px;
+    cursor:pointer;
+    transition-duration: 0.4s;
+}
+.site-form-login input[type="submit"]:hover {
+    background-color: #4caf5000;
+    color: white;
+}
+
+a.download{
+    position: absolute;
+    background:#00dba0;
+    border-radius: 4px;
+    padding: 5;
+    font-size:0.9em;
+    margin-top:
+
+}
+
+div.file{
+    margin-top: 20;
+    background: white;
+    max-width: 150;
+    border-radius: 4px;
+    padding-top: 8;
+    padding-right: 26;
+}
+.task-detail div.Rectangle2{;
+    height: 50;
+    width: 10000;
+    margin-right:;
+    background: black;
+    margin-top: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  position: absolute;
+  left: 0;
+  right: 0;
+
+}
+
+div.empty-task{
+    margin-top: 107;
+    position: absolute;
+    color: black;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+div.empty-task p{
+padding: 0 2px;
+}
+div.Task-list{
+    margin-top: 40;
+}

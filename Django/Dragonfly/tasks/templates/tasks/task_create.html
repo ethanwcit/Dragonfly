@@ -1,0 +1,14 @@
+{% extends 'base_layout.html' %}
+
+{% block content %}
+    <div class="create-task">
+        <h2><b>Create a new task</b></h2>
+        <form class="site-form" action="{% url 'task:create' %}" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ form }}
+            {{ form_file }}
+            <input type="submit" value="Create">
+        </form>
+    </div>
+
+{% endblock %}

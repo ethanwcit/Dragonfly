@@ -1,0 +1,47 @@
+{% load static %}
+<html>
+    <head>
+        <meta charset = "utf-8">
+        <title>Tasks</title>
+        <link rel = "stylesheet" href="{% static 'styles.css' %}">
+    </head>
+
+<div class="Rectangle"></div>
+<header class="navigation">
+    {% if homepage_url == 'studenthomepage'  %}
+    <a class="logo" href="{% url 'studenthomepage' %}"><img src="{% static 'logo.png' %}" width="250" height="125"/></a>
+    {% elif homepage_url == 'parenthomepage' %}
+    <a class="logo" href="{% url 'parenthomepage' %}"><img src="{% static 'logo.png' %}" width="250" height="125"/></a>
+    {% elif homepage_url == 'teacherhomepage' %}
+    <a class="logo" href="{% url 'teacherhomepage' %}"><img src="{% static 'logo.png' %}" width="250" height="125"/></a>
+    {% endif %}
+    <nav>
+        <div class="Icons">
+        <a class="task-icon" href="{% url 'task:list' %}"><img src="{% static 'Task-icon.png' %}" /></a>
+        </div>
+        <ul>
+            <li>
+            {% if homepage_url == 'teacherhomepage' or homepage_url == 'studenthomepage' %}
+                <a href="{% url 'task:create' %}" class="highlight">New Task</a>
+            {% endif %}
+            </li>
+
+        <li><form class='logout-link' action="{% url 'accounts:logout' %}" method="post">
+            {% csrf_token %}
+            <button type="submit">Logout</button>
+            </form></li>
+        </ul>
+    </nav>
+    </header>
+
+
+    <body class="task-body">
+    <div class ="wrapper">
+        {% block content %}
+        {% endblock %}
+        </div>
+    </body>
+    <div class="bottom">
+
+    </div>
+</html>
